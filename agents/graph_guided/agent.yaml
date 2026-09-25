@@ -1,0 +1,17 @@
+agent_class: LlmAgent
+name: richard_sikaonga_graph_guided_agent
+model: gemma-4-31b-it-qat-w4a16-ct
+description: >
+  Graph-guided evidence-first autonomous software engineering agent using
+  semantic retrieval, dependency analysis, minimal repair, and validation.
+instruction: !include system.md
+tools:
+  - name: get_status
+  - name: read_file
+  - name: edit_file
+  - name: write_file
+  - name: run_command
+  - name: get_code_neighbors
+  - name: search_similar_code
+  - name: get_code_subgraph
+  - name: submit_patch
